@@ -5,7 +5,7 @@
                                     Gontran Pestana Fernandez
 
 
-#1.Preparativos
+# 1.Preparativos
 
 -Necesitamos unna MV con un servidor DS-389 instalado con varios usuarios.
 
@@ -22,9 +22,9 @@ Comprobamos el acceso LDAP desde el ciente:
 
 
 
-#2.Configuracion de la autentificación LDAP.
+# 2.Configuracion de la autentificación LDAP.
 
-##Conexión con el servidor.
+## Conexión con el servidor.
 
 -Ir a Yast -> LDAP y Kerberos.
 
@@ -35,7 +35,7 @@ Comprobamos el acceso LDAP desde el ciente:
 ![](./png/4.png)
 
 
-##Comprobamos la estancia por comandos.
+## Comprobamos la estancia por comandos.
 
 -En la consola del cliente con el usuario root:
 
@@ -47,7 +47,7 @@ Comprobamos el acceso LDAP desde el ciente:
 
 
 
-#3.Crear usuarios y grupos dentro de LDAP desde el cliente.
+# 3.Crear usuarios y grupos dentro de LDAP desde el cliente.
 
 -Iremos a Yast -> Gestión de usuarios y grupos.
 
@@ -59,6 +59,6 @@ Comprobamos el acceso LDAP desde el ciente:
 ![](./png/5.png)
 
 
-##En este apartado el servidor LDAP deja de autentificar al cliente.
+## En este apartado el servidor LDAP deja de autentificar al cliente.
 
 ![](./png/5.1.png)
