@@ -16,17 +16,17 @@
 
 - Añadir al archivo de configuración /etc/salt/master la ip del master y su ruta:
 
-*
+
 interface: 192.168.1.31
 file_roots:
 base:
-  - /srv/salt
-*
+  -/srv/salt
+
 
 - Iniciamos el servicio y activamos el servicio para el arranque del sistema:
 
-* systemctl start salt-master.service
-* systemctl enable salt-master.service
+systemctl start salt-master.service
+systemctl enable salt-master.service
 
 - Y consultamos los minion aceptados --> salt-key -L (No habra ninguno)
 
@@ -37,14 +37,14 @@ base:
 
 - Y le indicamos en /etc/salt/minion quien sera el Master:
 
-*
+
 master: 172.19.XX.31
-*
+
 
 - Iniciamos el servicio y activamos el servicio para el arranque del sistema:
 
-* systemctl start salt-master.service
-* systemctl enable salt-master.service
+ systemctl start salt-master.service
+ systemctl enable salt-master.service
 
 
 ## 3.2 Cortafuegos
@@ -107,11 +107,11 @@ En MV1:
 
 - Crear /srv/salt/base/top.sls, donde asociamos a todos los Minions con el estado que acabamos de definir.
 
-*
+
 base:
   '*':
     - apache
-*
+
 
 ## 4.4 Comprobamos los estados
 
@@ -126,9 +126,9 @@ En MV1:
 
 - Consultar los estados en detalle y verificar que no hay errores en las definiciones.
 
-* salt '*' state.show_lowstate
+salt '*' state.show_lowstate
 
-* salt '*' state.show_highstate
+salt '*' state.show_highstate
 
 - Aplicar el nuevo estado en todos los minions:
 
@@ -145,8 +145,8 @@ Crear un estado llamado users que nos servirá para crear un grupo y usuarios en
 
 - Crear fichero /srv/salt/base/users/init.sls con las definiciones para crear los siguiente:
 
-      *  Grupo mazingerz
-      *  Usuarios kojiXX, drinfiernoXX
+        Grupo mazingerz
+        Usuarios kojiXX, drinfiernoXX
 
 - Aplicar el estado --> salt '*' state.apply users
 
